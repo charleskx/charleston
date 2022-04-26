@@ -15,7 +15,7 @@ const Typography = ({
   ...props
 }: ITypographyProps) => {
   // Defining the types of alignments the component will support
-  const alignMapping = useMemo(
+  const alignsMapping = useMemo(
     () => ({
       left: 'text-left',
       center: 'text-center',
@@ -27,7 +27,7 @@ const Typography = ({
 
   return (
     <Component
-      className={`${align && alignMapping[align]} ${className}`}
+      className={`${align && alignsMapping[align]} ${className}`}
       {...props}
     >
       {children}
